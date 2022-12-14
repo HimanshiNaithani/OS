@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int Readyqueue[100],i,n,totalheadmove=0,initial;
+	printf("Enter ready queue track no : ");
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+		scanf("%d",&Readyqueue[i]);
+	}
+	    printf("Enter the position for read write head: ");
+	scanf("%d",&initial);
+	for(i=0;i<n;i++){
+		totalheadmove=totalheadmove+abs(Readyqueue[i]-initial);
+		initial=Readyqueue[i];
+	}
+	printf("Total head move =%d",totalheadmove);
+}
